@@ -6,7 +6,9 @@ var fakeCount;
 var entered = 0;
 var entered2 = 0;
 
+console.log(localStorage.getItem(entered));
 if(!localStorage.getItem(entered) === 0 || !localStorage.getItem(entered) === 1) localStorage.setItem(entered, 0);
+console.log(localStorage.getItem(entered));
 
 document.getElementById('coolbutton').addEventListener('click', async () => {
     if(localStorage.getItem(entered) == 0 && entered2 === 0) {
