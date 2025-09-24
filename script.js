@@ -3,13 +3,13 @@ const incrementUrl = 'https://api.counterapi.dev/v2/giveaway/entries/up';
 const getCountUrl = 'https://api.counterapi.dev/v2/giveaway/entries';
 var fakeCount;
 
-var entered = 0;
+var entered;
 var entered2 = 0;
 
 if(localStorage.getItem(entered) === null) localStorage.setItem(entered, 0);
 
 document.getElementById('coolbutton').addEventListener('click', async () => {
-    if(localStorage.getItem(entered) === 0 && entered2 === 0) {
+    if(localStorage.getItem(entered) == 0 && entered2 == 0) {
         const res = await fetch(incrementUrl);
         const data = await res.json();  
         fakeCount+=1;
